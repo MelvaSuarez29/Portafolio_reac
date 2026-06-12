@@ -1,0 +1,192 @@
+/* ==================================================
+   ESTILOS PARA EL COMPONENTE Projects
+   ================================================== */
+.projects {
+  padding: 120px 24px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, transparent 0%, rgba(15, 17, 48, 0.3) 50%, transparent 100%);
+}
+.projects-bg {
+  position: absolute;
+  bottom: 10%;
+  left: -10%;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.projects-header {
+  margin-bottom: 72px;
+  text-align: center;
+}
+.section-tag-projects {
+  display: inline-block;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  border-radius: 100px;
+  padding: 6px 20px;
+  color: #00d4ff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.projects-title {
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #e8eaf6;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.projects-subtitle {
+  font-size: 17px;
+  color: #8b90c8;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.project-card {
+  background: rgba(15, 17, 48, 0.7);
+  border: 1px solid rgba(124, 58, 237, 0.15);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  cursor: default;
+}
+.project-thumbnail {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  background: #0f1130;
+}
+.project-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.project-thumbnail img:hover {
+  opacity: 0.9;
+  transform: scale(1.04);
+}
+.thumbnail-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 17, 48, 0.8) 0%, transparent 60%);
+}
+.accent-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+.project-content {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.project-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #e8eaf6;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.project-description {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #8b90c8;
+  margin-bottom: 18px;
+  flex: 1;
+}
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.tag {
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(0, 212, 255, 0.12);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  border-radius: 100px;
+  padding: 4px 10px;
+  letter-spacing: 0.03em;
+}
+.project-links {
+  display: flex;
+  gap: 12px;
+}
+.demo-link, .code-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+.demo-link:hover, .code-link:hover {
+  opacity: 0.7;
+}
+.code-link {
+  color: #8b90c8;
+  margin-left: auto;
+}
+.code-link:hover {
+  color: #e8eaf6;
+}
+.view-all {
+  margin-top: 56px;
+  text-align: center;
+}
+.view-all-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid rgba(124, 58, 237, 0.35);
+  border-radius: 12px;
+  padding: 14px 28px;
+  color: #a855f7;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.2s, background 0.2s;
+}
+.view-all-button:hover {
+  border-color: #a855f7;
+  background: rgba(168, 85, 247, 0.08);
+}
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
